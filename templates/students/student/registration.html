@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% block title %}
+    Sign up
+{% endblock %}
+{% block content %}
+    <div class="container mb-11">
+        <div class="row gx-0">
+            <div class="col-md-7 col-xl-4 mx-auto">
+                <h1>
+                    Sign Up
+                </h1>
+                    <div class="module">
+                        <p>Enter your details to create an account:</p>
+                        <form class="mb-5" method="post">
+                            <div class="d-flex align-items-center mb-5 font-size-sm">
+                                <div class="form-check">
+                                    {% bootstrap_form form %} 
+                                    {% csrf_token %}
+                                    {% buttons %}
+                                    <p><input class="btn btn-block btn-primary"  type="submit" value="Create Account"></p>
+                                    {% endbuttons %}
+                                </div>
+                            </div>
+                    
+            
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+                          
+{% endblock %}
